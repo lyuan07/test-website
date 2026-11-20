@@ -1,0 +1,20 @@
+ticket: github-1
+ticket_pinned_whole: false
+specs:
+- 2026-11-20-fd98a
+series_repos:
+- test-website
+revisions:
+- number: 1
+  cause: initial derivation
+  at: 2026-11-20T20:17:04.6070005+00:00
+carried:
+- segment: 1
+  spec: 2026-11-20-fd98a
+discarded: []
+unaccounted: []
+shared: []
+discarded_contexts: []
+handback_readings: []
+handback_taken: 0
+ticket_fingerprint: 29778bd15afedb28d8212c9d63263db741dcc57195045021c7dc3cf7b5371dbe

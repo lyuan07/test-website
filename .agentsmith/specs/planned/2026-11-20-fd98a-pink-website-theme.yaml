@@ -1,0 +1,32 @@
+spec: 2026-11-20-fd98a
+goal: The website presents a coherent pink theme through its existing color system while preserving its content and responsive layout.
+repos:
+- test-website
+scope:
+  in: Ticket 1, segment(s) 1 — carried verbatim in 2026-11-20-fd98a-pink-website-theme.md
+decisions:
+- key: Derived from ticket 1 by agent-smith. The verbatim naming rules, forbidden APIs and code templates this spec must honour are carried byte-identical in 2026-11-20-fd98a-pink-website-theme.md — read it, never a summary of it.
+steps:
+- id: palette
+  action: Choose a coordinated pink palette with readable foregrounds, darker accents, and pale backgrounds.
+- id: theme
+  action: Apply the palette through the existing theme tokens and their consumers, preserving semantic status colors, content, and responsive behavior.
+- id: verification
+  action: Add a regression check for the pink theme and run the repository's unittest suite.
+done:
+- The stylesheet defines pink values for --brand, --brand-dark, --brand-soft, and --brand-ink, with a pale pink --canvas; the existing brand-colored components use this palette.
+- A regression test checks the pink theme values and fails if the previous indigo brand palette is restored.
+- python3 -m unittest discover -s tests -v exits successfully.
+facts:
+- claim: The stylesheet centralizes brand colors in four custom properties used by headings, buttons, progress indicators, badges, icons, and decorative effects.
+  evidence: "[L6] default: the derivation ran 'read site/styles.css' exited 0"
+- claim: The stylesheet contains a separate green status indicator and responsive rules at an 860px breakpoint.
+  evidence: "[L6] default: the derivation ran 'read site/styles.css' exited 0"
+- claim: The page links to the shared stylesheet and already contains navigation, main content, and footer landmarks.
+  evidence: "[L7] default: the derivation ran 'read site/index.html' exited 0"
+- claim: Existing tests check page identity, theme-token completeness, and semantic landmarks.
+  evidence: "[L2] default: the derivation ran 'grep -E '.' tests' exited 0"
+- claim: Repository instructions require preserving semantic HTML and responsive behavior, updating tests for behavior changes, and running unittest discovery.
+  evidence: "[L4] default: the derivation ran 'read AGENTS.md' exited 0"
+contexts:
+- default
