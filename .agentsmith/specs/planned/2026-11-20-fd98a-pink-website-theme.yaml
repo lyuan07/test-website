@@ -5,7 +5,7 @@ repos:
 scope:
   in: Ticket 1, segment(s) 1 — carried verbatim in 2026-11-20-fd98a-pink-website-theme.md
 decisions:
-- key: Derived from ticket 1 by agent-smith. The verbatim naming rules, forbidden APIs and code templates this spec must honour are carried byte-identical in 2026-11-20-fd98a-pink-website-theme.md — read it, never a summary of it.
+- key: Derived from ticket 1 by agent-smith. The verbatim ticket instruction, "make the website pink", is carried in 2026-11-20-fd98a-pink-website-theme.md — read it, never a summary of it.
 steps:
 - id: palette
   action: Choose a coordinated pink palette with readable foregrounds, darker accents, and pale backgrounds.

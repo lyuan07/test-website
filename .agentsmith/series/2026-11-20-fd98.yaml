@@ -8,6 +8,9 @@ revisions:
 - number: 1
   cause: initial derivation
   at: 2026-11-20T20:17:04.6070005+00:00
+- number: 2
+  cause: 'spec review round 1 of 2026-11-20-fd98a: build-with-cuts'
+  at: 2026-11-20T20:18:09.7489981+00:00
 carried:
 - segment: 1
   spec: 2026-11-20-fd98a
