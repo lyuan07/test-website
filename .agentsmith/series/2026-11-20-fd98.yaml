@@ -11,6 +11,9 @@ revisions:
 - number: 2
   cause: 'spec review round 1 of 2026-11-20-fd98a: build-with-cuts'
   at: 2026-11-20T20:18:09.7489981+00:00
+- number: 3
+  cause: 'spec review: a standing objection asked once'
+  at: 2026-11-20T20:18:14.4683926+00:00
 carried:
 - segment: 1
   spec: 2026-11-20-fd98a
@@ -18,6 +21,19 @@ discarded: []
 unaccounted: []
 shared: []
 discarded_contexts: []
-handback_readings: []
+handback_case: Question
+handback_reason: >-
+  After its review rounds, what follows has no review that ended clean on its exact text: a reviewer that opened the code still objects, or the last changes were never attacked. Only the author can say whether it is built as it stands or changed. If nobody answers, it is not built: the next run reviews it again from fresh rounds.
+
+
+  an objection from the spec review to 2026-11-20-fd98a at text 143b07908f57 stands:
+
+  - The referenced ticket segment contains only "make the website pink"; it supplies none of the naming rules, forbidden APIs or code templates asserted by the decisions register. Correct that unsupported description; the implementation steps and done criteria are otherwise achievable and observable. — test-website/.agentsmith/specs/planned/2026-11-20-fd98a-pink-website-theme.md:9 [A9]
+
+  - the text below came from the review's last changes, and no reviewer attacked it in this form — round 1
+handback_readings:
+- build the spec as reviewed; the objection stays on record
+- change the spec as the objection asks
 handback_taken: 0
+handback_question_kind: ReviewObjection
 ticket_fingerprint: 29778bd15afedb28d8212c9d63263db741dcc57195045021c7dc3cf7b5371dbe
