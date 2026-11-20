@@ -1,0 +1,23 @@
+meta:
+  workdir: "."
+  type: [website, ui]
+  purpose: "Disposable static website for safe Agent Taro ticket-to-code tests."
+
+methodology:
+  version: "2.1.0"
+
+stack:
+  lang: Python
+  image: python:3.12-bookworm
+  frontend: [HTML, CSS]
+  testing: [unittest]
+
+verify:
+  - label: test
+    command: python3 -m unittest discover -s tests -v
+
+gate: project
+
+quality:
+  principles: [small-changes, regression-tests, no-secrets]
+  scope: "Keep the fixture dependency-free and synthetic."
