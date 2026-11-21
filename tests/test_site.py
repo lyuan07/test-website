@@ -18,6 +18,19 @@ class TestWebsiteTests(unittest.TestCase):
         for token in ("--brand", "--brand-dark", "--brand-soft", "--brand-ink"):
             self.assertRegex(CSS, rf"{re.escape(token)}:\s*#[0-9A-Fa-f]{{6}};")
 
+    def test_theme_uses_pink_palette(self):
+        palette = {
+            "--brand": "#BE185D",
+            "--brand-dark": "#9D174D",
+            "--brand-soft": "#FCE7F3",
+            "--brand-ink": "#831843",
+            "--line": "#FBCFE8",
+            "--canvas": "#FFF1F7",
+        }
+        for token, color in palette.items():
+            with self.subTest(token=token):
+                self.assertRegex(CSS, rf"{re.escape(token)}:\s*{color};")
+
     def test_page_has_accessible_structure(self):
         self.assertIn("<nav", HTML)
         self.assertIn("<main", HTML)
