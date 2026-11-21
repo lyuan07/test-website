@@ -1,13 +1,13 @@
 :root {
-  --brand: #BE185D;
-  --brand-dark: #9D174D;
-  --brand-soft: #FCE7F3;
-  --brand-ink: #831843;
+  --brand: #15803D;
+  --brand-dark: #166534;
+  --brand-soft: #DCFCE7;
+  --brand-ink: #14532D;
   --ink: #172033;
   --muted: #667085;
-  --line: #FBCFE8;
+  --line: #BBF7D0;
   --paper: #FFFFFF;
-  --canvas: #FFF1F2;
+  --canvas: #F0FDF4;
 }
 
 * { box-sizing: border-box; }
