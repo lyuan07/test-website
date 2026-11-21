@@ -1,0 +1,4 @@
+run: 2026-11-21T04-44-23-84ef
+decisions:
+  - category: Implementation
+    chose: "**Current color requirement**: The later operator review comments request green and supersede the original pink request because this run has no ratified spec."
