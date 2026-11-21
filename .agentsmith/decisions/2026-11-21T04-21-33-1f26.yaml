@@ -1,0 +1,4 @@
+run: 2026-11-21T04-21-33-1f26
+decisions:
+  - category: Implementation
+    chose: "**Handoff**: Updated six theme tokens in site/styles.css and added pink palette regression coverage in tests/test_site.py; no files or APIs were renamed or moved, no plan deviations occurred, and all four tests passed; hand_forward is unavailable on this tool surface."
