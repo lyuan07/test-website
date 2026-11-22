@@ -1,0 +1,8 @@
+run: 2026-11-21T04-44-23-84ef
+decisions:
+  - category: Implementation
+    chose: "**Current color requirement**: The later operator review comments request green and supersede the original pink request because this run has no ratified spec."
+  - category: Implementation
+    chose: "**Green palette**: Replace the six existing pink theme tokens with coordinated green values so the existing components inherit the requested color change without altering layout or dependencies."
+  - category: Implementation
+    chose: "**Handoff**: Persisted six green theme tokens in site/styles.css and updated tests/test_site.py, renaming test_theme_uses_pink_palette -> test_theme_uses_green_palette; no files moved, the later operator comments supersede pink, all 4 tests and git diff --check passed, no separate build exists, and hand_forward is unavailable on this tool surface."
