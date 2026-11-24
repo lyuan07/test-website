@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "build_ran": false,
+  "build_passed": false,
+  "tests_ran": false,
+  "tests_passed": false,
+  "summary": "The shell sandbox could not start because the kernel blocked namespace creation. I could not inspect the checkout, change the header, or run verification. No files were changed.",
+  "failing_tests": [],
+  "baseline_failing_tests": [],
+  "ignored_instructions": []
+}
