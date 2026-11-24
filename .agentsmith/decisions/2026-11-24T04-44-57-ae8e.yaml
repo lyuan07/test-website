@@ -1,0 +1,4 @@
+run: 2026-11-24T04-44-57-ae8e
+decisions:
+  - category: Implementation
+    chose: "**Implementation confirmed**: the working tree contains the hero markup, responsive CSS, regression tests, and copied PNG matching the attachment byte for byte; retain these completed edits and run the declared test gate, since this static repository defines no separate build step."
