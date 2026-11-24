@@ -40,9 +40,9 @@ class TestWebsiteTests(unittest.TestCase):
             HTML,
         )
 
-    def test_header_paragraph_describes_apex_solutions(self):
+    def test_header_paragraph_describes_prism_solutions(self):
         self.assertIn(
-            "<p>Apex Solutions gives growing teams one place to plan customer work, "
+            "<p>Prism Solutions gives growing teams one place to plan customer work, "
             "automate the busywork, and keep every promise.</p>",
             HTML,
         )

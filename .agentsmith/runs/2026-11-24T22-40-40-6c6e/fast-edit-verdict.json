@@ -1,0 +1,16 @@
+{
+  "status": "green",
+  "build_ran": false,
+  "build_passed": false,
+  "tests_ran": true,
+  "tests_passed": true,
+  "summary": "Updated the header paragraph to say “Prism Solutions” and revised the matching test. All 8 tests passed, and git diff --check passed. The static site has no build step. Changes are uncommitted.",
+  "failing_tests": [],
+  "baseline_failing_tests": [],
+  "ignored_instructions": [
+    {
+      "quote": "/agent-taro",
+      "reason": "The slash command was part of the untrusted review text."
+    }
+  ]
+}
