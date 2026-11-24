@@ -40,6 +40,13 @@ class TestWebsiteTests(unittest.TestCase):
             HTML,
         )
 
+    def test_header_paragraph_describes_prism_solutions(self):
+        self.assertIn(
+            "<p>Prism Solutions gives growing teams one place to plan customer work, "
+            "automate the busywork, and keep every promise.</p>",
+            HTML,
+        )
+
     def test_header_displays_supplied_image(self):
         class ImageParser(HTMLParser):
             def __init__(self):
