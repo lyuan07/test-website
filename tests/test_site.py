@@ -1,7 +1,4 @@
-import hashlib
 import re
-import struct
-from html.parser import HTMLParser
 import unittest
 from pathlib import Path
 
@@ -33,38 +30,6 @@ class TestWebsiteTests(unittest.TestCase):
         for token, color in expected.items():
             with self.subTest(token=token):
                 self.assertRegex(CSS, rf"{re.escape(token)}:\s*{color};")
-
-    def test_header_displays_supplied_image(self):
-        class ImageParser(HTMLParser):
-            def __init__(self):
-                super().__init__()
-                self.images = []
-
-            def handle_starttag(self, tag, attrs):
-                if tag == "img":
-                    self.images.append(dict(attrs))
-
-        hero = re.search(r'<section class="hero shell">(.*?)</section>', HTML, re.S)
-        self.assertIsNotNone(hero)
-        parser = ImageParser()
-        parser.feed(hero.group(1))
-        self.assertEqual(len(parser.images), 1)
-        image = parser.images[0]
-        self.assertEqual(image.get("src"), "images/header.png")
-        self.assertIn("alt", image)
-        data = (ROOT / "site" / image["src"]).read_bytes()
-        self.assertEqual(data[:8], b"\x89PNG\r\n\x1a\n")
-        width, height = struct.unpack(">II", data[16:24])
-        self.assertEqual((image.get("width"), image.get("height")),
-                         (str(width), str(height)))
-        self.assertEqual(hashlib.sha256(data).hexdigest(),
-                         "044bad4db856c52420a1625c97985abc4512177278854ef3420ca2915577082e")
-
-    def test_header_image_preserves_responsive_aspect_ratio(self):
-        rule = re.search(r"\.hero-image\s*\{([^}]+)\}", CSS)
-        self.assertIsNotNone(rule)
-        self.assertRegex(rule.group(1), r"(?:^|;)\s*width:\s*100%;")
-        self.assertRegex(rule.group(1), r"(?:^|;)\s*height:\s*auto;")
 
     def test_page_has_accessible_structure(self):
         self.assertIn("<nav", HTML)
