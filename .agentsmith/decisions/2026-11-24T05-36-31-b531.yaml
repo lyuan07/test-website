@@ -1,0 +1,4 @@
+run: 2026-11-24T05-36-31-b531
+decisions:
+  - category: Implementation
+    chose: "**Restoration boundary**: reverse only the four source and test paths changed by attempt commit 1597e4929d5e9c0992baadc08b88efa3930af8cc, identified through its run-directory additions because no Run-Id trailer exists; preserve all historical metadata, unrelated green-theme changes, and publication branches."
