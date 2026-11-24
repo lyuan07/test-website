@@ -34,6 +34,12 @@ class TestWebsiteTests(unittest.TestCase):
             with self.subTest(token=token):
                 self.assertRegex(CSS, rf"{re.escape(token)}:\s*{color};")
 
+    def test_header_describes_high_performing_teams(self):
+        self.assertIn(
+            '<div class="eyebrow"><span></span> Built for high-performing teams</div>',
+            HTML,
+        )
+
     def test_header_displays_supplied_image(self):
         class ImageParser(HTMLParser):
             def __init__(self):
