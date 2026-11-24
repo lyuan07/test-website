@@ -21,14 +21,14 @@ class TestWebsiteTests(unittest.TestCase):
         for token in ("--brand", "--brand-dark", "--brand-soft", "--brand-ink"):
             self.assertRegex(CSS, rf"{re.escape(token)}:\s*#[0-9A-Fa-f]{{6}};")
 
-    def test_theme_uses_green_palette(self):
+    def test_theme_uses_blue_palette(self):
         expected = {
-            "--brand": "#15803D",
-            "--brand-dark": "#166534",
-            "--brand-soft": "#DCFCE7",
-            "--brand-ink": "#14532D",
-            "--line": "#BBF7D0",
-            "--canvas": "#F0FDF4",
+            "--brand": "#1D4ED8",
+            "--brand-dark": "#1E40AF",
+            "--brand-soft": "#DBEAFE",
+            "--brand-ink": "#1E3A8A",
+            "--line": "#BFDBFE",
+            "--canvas": "#EFF6FF",
         }
         for token, color in expected.items():
             with self.subTest(token=token):
